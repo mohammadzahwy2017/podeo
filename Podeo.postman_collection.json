@@ -1,0 +1,619 @@
+{
+	"info": {
+		"_postman_id": "206404cf-d88c-4dbd-9072-c201c95fdf33",
+		"name": "Podeo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Podcast",
+			"item": [
+				{
+					"name": "Episode",
+					"item": [
+						{
+							"name": "Get Episodes List",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "127.0.0.1:8000/api/podcast/episode",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"podcast",
+										"episode"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Specific Episode",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "127.0.0.1:8000/api/podcast/episode/2",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"podcast",
+										"episode",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create New Episode",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "testt",
+											"description": "string (Max Characters: 125)",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "testt",
+											"description": "Medium Text (Max Characters:16777215)",
+											"type": "text"
+										},
+										{
+											"key": "published",
+											"value": "1",
+											"description": "Boolean",
+											"type": "text"
+										},
+										{
+											"key": "podcast_id",
+											"value": "1",
+											"description": "ID of existing Podcast (Integer)",
+											"type": "text"
+										},
+										{
+											"key": "duration",
+											"value": "2.6",
+											"description": "float",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/podcast/episode",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"podcast",
+										"episode"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Specific Episode",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "test",
+											"description": "string (Max Characters: 125)",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "test",
+											"description": "Medium Text (Max Characters:16777215)",
+											"type": "text"
+										},
+										{
+											"key": "published",
+											"value": "1",
+											"description": "Boolean",
+											"type": "text"
+										},
+										{
+											"key": "podcast_id",
+											"value": "1",
+											"description": "ID of existing Podcast (Integer)",
+											"type": "text"
+										},
+										{
+											"key": "duration",
+											"value": "23",
+											"description": "float",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/podcast/episode/1",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"podcast",
+										"episode",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Specific Episdoe",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "127.0.0.1:8000/api/podcast/episode/2",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"podcast",
+										"episode",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get Podcasts List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "21|pmc5wrPby1nIFUW2SQYV2BehrMkOi8ErO9ft3XzF",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/podcast",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"podcast"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specific Podcast",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8000/api/podcast/2",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"podcast",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Podcast",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "testttt",
+									"description": "string (Max Characters: 125)",
+									"type": "text"
+								},
+								{
+									"key": "about",
+									"value": "testttt",
+									"description": "Medium Text (Max Characters:16777215)",
+									"type": "text"
+								},
+								{
+									"key": "published",
+									"value": "1",
+									"description": "Boolean",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/podcast",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"podcast"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Specific Podcast",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "test",
+									"description": "string (Max Characters: 125)",
+									"type": "text"
+								},
+								{
+									"key": "about",
+									"value": "test",
+									"description": "Medium Text (Max Characters:16777215)",
+									"type": "text"
+								},
+								{
+									"key": "published",
+									"value": "1",
+									"description": "Boolean",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/podcast/1",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"podcast",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Specific Podcast",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8000/api/podcast/2",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"podcast",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "15|SBTqkP8WuATOPED43hoZ1R0z22wYdVGvZobsZRgq",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"mohammadzahwy2017@gmail.com\",\r\n    \"password\":\"admin@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "20|i83Wft1FNIwxPjakV3a83pEVkEDo6jJSPFWYRHv",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:8000/api/logout",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Revoke All Tokens",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "20|i83Wft1FNIwxPjakV3a83pEVkEDo6jJSPFWYRHv",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:8000/api/revoke-all-tokens",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"revoke-all-tokens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Revoke Tokens Except Current",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "20|i83Wft1FNIwxPjakV3a83pEVkEDo6jJSPFWYRHv",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:8000/api/revoke-tokens-except-current",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"revoke-tokens-except-current"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
